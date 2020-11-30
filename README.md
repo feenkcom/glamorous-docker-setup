@@ -1,5 +1,5 @@
 # glamorous docker setup
-This is a template repository for building and packaging a Server build with Glamorous Toolkit in a docker image.
+This is a template repository for building and packaging a Server built with Glamorous Toolkit in a docker image.
 
 ## Build docker image with bash
 ```
