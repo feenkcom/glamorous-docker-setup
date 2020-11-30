@@ -1,14 +1,14 @@
 Class {
-	#name : #BaselineOfDockerSetup,
+	#name : #BaselineOfGlamorousDockerSetup,
 	#superclass : #BaselineOf,
-	#category : #'BaselineOfDockerSetup-BaselineOfDockerSetup'
+	#category : #'BaselineOfGlamorousDockerSetup-BaselineOfGlamorousDockerSetup'
 }
 
 { #category : #accessing }
-BaselineOfDockerSetup >> baseline: spec [
+BaselineOfGlamorousDockerSetup >> baseline: spec [
 	<baseline>
 	spec
 		for: #common do: [
 			spec
-				package: 'DockerSetup' ]
+				package: 'GlamorousDockerSetup' ]
 ]
