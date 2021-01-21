@@ -10,10 +10,9 @@ EpMonitor current disable.
 [
     "Replace the code below with your own repository."
     Metacello new
-        onWarningLog;
         baseline: 'GlamorousDockerSetup';
+        repository: 'gitlocal://src';
         onConflictUseIncoming;
-        repository: 'github://feenkcom/glamorous-docker-setup/src';
         load.
 ] ensure: [ EpMonitor current enable ].
 
