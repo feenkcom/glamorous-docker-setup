@@ -37,3 +37,5 @@ Then, in xterm
 cd GlamorousToolkit
 ./glamoroustoolkit GlamorousToolkit.image st ../run.st --no-quit --interactive
 ```
+
+![gt xpra](https://github.com/feenkcom/glamorous-docker-setup/raw/main/screenshots/gt-xpra.png "Glamorous Toolkit Hello World app running in a container with the UI served by Xpra")
