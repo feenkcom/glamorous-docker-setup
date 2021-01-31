@@ -13,9 +13,14 @@ EpMonitor current disable.
         onWarningLog;
         baseline: 'GlamorousDockerSetup';
         onConflictUseIncoming;
-        repository: 'github://feenkcom/glamorous-docker-setup/src';
+        repository: 'github://feenkcom/glamorous-docker-setup:main/src';
         load.
 ] ensure: [ EpMonitor current enable ].
+
+
+BrGlamorousFonts class compile: 'initializeFonts
+
+.'.
 
 
 Smalltalk snapshot: true andQuit: true.
