@@ -1,5 +1,2 @@
-"Server startup code should be placed below."
-Transcript crShow: (40 + 2).
-"Obviosly, remove the next line if you're starting a server, this is just a template app."
 GtCreateStandaloneAppHowToGuide new helloWorldSceneInSpace.
-Smalltalk snapshot: false andQuit: true.
+Smalltalk snapshot: true andQuit: false.
