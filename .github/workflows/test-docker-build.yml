@@ -1,0 +1,17 @@
+name: test docker build
+
+on:
+  schedule:
+    - cron: "30 * * * *"
+  push:
+  workflow_dispatch:
+
+jobs:
+  build_docker_cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build docker cli
+        run: DOCKER_BUILDKIT=1 docker build --no-cache -f github-token.dockerfile -t glamorousdocker .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
