@@ -1,8 +1,6 @@
 name: test docker build
 
 on:
-  schedule:
-    - cron: "30 * * * *"
   push:
   workflow_dispatch:
 
