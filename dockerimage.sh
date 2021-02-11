@@ -15,5 +15,6 @@ curl -s -L  https://github.com/feenkcom/gtoolkit/releases/latest/download/libLin
 unzip -q libLinux64.zip
 mv libLinux64-v*/* .
 ls -al
+ldd libSkia.so
 #load our own code on top of pharo
 ./glamoroustoolkit GlamorousToolkit.image st ../load.st
