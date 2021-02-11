@@ -1,17 +1,17 @@
 Author fullName: 'GlamorousToolkit'.
 
-GitHubToken := OSEnvironment at: 'GITHUB_TOKEN' ifAbsent: [nil].
+githubToken := OSEnvironment current at: 'GITHUB_TOKEN' ifAbsent: [nil].
 
-GitHubToken ifNil: [
+githubToken ifNil: [
     IceCredentialsProvider useCustomSsh: true.
     IceCredentialsProvider sshCredentials
         publicKey: '/run/secrets/myid_rsa.pub';
         privateKey: '/run/secrets/myid_rsa'.
-] else: [
+] ifNotNil: [
     IceCredentialStore current
         storeCredential: (IceTokenCredentials new
-            username: 'markfirmware@user.noreply.github.com';
-            token: (OSEnvironment at: 'GITHUB_TOKEN' ifAbsent: [Error signal: 'no GITHUB_TOKEN']);
+            username: 'githubuser@user.noreply.github.com';
+            token: githubToken;
             yourself) 
         forHostname: 'github.com'.
 ].
