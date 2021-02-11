@@ -2,17 +2,17 @@
 set -e
 
 #get the latest gt image
-curl -L https://github.com/feenkcom/gtoolkit/releases/latest/download/GT.zip -o GT.zip
-unzip GT.zip
+curl -s -L https://github.com/feenkcom/gtoolkit/releases/latest/download/GT.zip -o GT.zip
+unzip -q GT.zip
 
 #get the latest glamorous toolkit vm
 cd GlamorousToolkit
-curl -L https://github.com/feenkcom/gtoolkit/releases/latest/download/GlamorousToolkitVM-linux64-bin.zip -o GlamorousToolkitVM-linux64-bin.zip
-unzip GlamorousToolkitVM-linux64-bin.zip
+curl -s -L https://github.com/feenkcom/gtoolkit/releases/latest/download/GlamorousToolkitVM-linux64-bin.zip -o GlamorousToolkitVM-linux64-bin.zip
+unzip -q GlamorousToolkitVM-linux64-bin.zip
 
 #get the linux ui libs
-curl -L  https://github.com/feenkcom/gtoolkit/releases/latest/download/libLinux64.zip -o libLinux64.zip
-unzip libLinux64.zip
+curl -s -L  https://github.com/feenkcom/gtoolkit/releases/latest/download/libLinux64.zip -o libLinux64.zip
+unzip -q libLinux64.zip
 mv libLinux64-v*/* .
 ls -al
 #load our own code on top of pharo
