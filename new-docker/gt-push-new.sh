@@ -13,7 +13,6 @@ function help() {
   echo "                    Tag the build as a latest version."
   echo "                    It can also be set using GT_PUSH_AS_LATEST."
   echo "                    The value is mandatory and can have 'update-latest' or 'no-latest' values."
-  echo "  context name:     Use a given Docker context (or default)."
 }
 
 if [ "$1" = "--help" ] || [ "$1" = "-h" ] ; then
